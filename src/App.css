@@ -2,37 +2,53 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.red {
+  color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bold {
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.button {
+  background-color: 'red';
   color: white;
+  font: inherit;
+  border: 1px solid blue;
+  padding: 8px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  background-color: 'lightgreen';
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.tiktok {
+  font-family: Heboo;
+  font-size: 60px;
+  color: white;
+  letter-spacing: 10px;
+  text-shadow: 4px 2px 0 red, -4px -2px 0 blue;
+  cursor: pointer;
+}
+
+.tiktok:hover {
+  animation: shadows 0.2s ease-in infinite;
+}
+
+@keyframes shadows {
+  0%,
+  100% {
+    text-shadow: 4px 0 0 red, 0 -4px 0 blue;
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    text-shadow: 4px 4px 0 red, -4px -4px 0 blue;
+  }
+  50% {
+    text-shadow: 0 4px 0 red, -4px 0 0 blue;
+  }
+  75% {
+    text-shadow: 0 0 0 red, 0 0 0 blue;
   }
 }
